@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI & Real Shop Health Support | 健康習慣をはじめよう</title>
+  <style>
+    /* --------------------------------------
+       ベース設定
+    -------------------------------------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      line-height: 1.6;
+      color: #2c3e50;
+      background-color: #f8fafc;
+    }
+
+    /* --------------------------------------
+       ヒーローセクション
+    -------------------------------------- */
+    .hero {
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      color: #ffffff;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* --------------------------------------
+       レイアウト容器
+    -------------------------------------- */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #047857;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background-color: #10b981;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* --------------------------------------
+       コンセプト＆ターゲットカード
+    -------------------------------------- */
+    .concept-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 3rem;
+    }
+
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .concept-box {
+      background-color: #f0fdf4;
+      border-left: 4px solid #10b981;
+      padding: 1.2rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .concept-box h3 {
+      font-size: 1rem;
+      color: #047857;
+      margin-bottom: 0.5rem;
+    }
+
+    .concept-box p {
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    /* --------------------------------------
+       コア機能（アプリ×お店）
+    -------------------------------------- */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      color: #1e293b;
+      margin-bottom: 0.8rem;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #64748b;
+      text-align: left;
+    }
+
+    /* --------------------------------------
+       必要要素（リソースリスト）
+    -------------------------------------- */
+    .resources {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .resource-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .resource-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.8rem 1rem;
+      background-color: #f8fafc;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: #334155;
+    }
+
+    .resource-item span {
+      color: #10b981;
+    }
+
+    /* --------------------------------------
+       フッター
+    -------------------------------------- */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヒーローセクション -->
+  <header class="hero">
+    <div class="hero-badge">DESIGN THINKING CONCEPT</div>
+    <h1>AI × リアル店舗でつくる<br>毎日の健康習慣</h1>
+    <p>病気を予防し、一人ひとりに寄り添った継続できる健康管理をサポートします。</p>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="container">
+
+    <!-- コンセプト概要 -->
+    <section class="concept-card">
+      <h2 class="section-title">ターゲットと目的</h2>
+      <div class="concept-grid">
+        <div class="concept-box">
+          <h3>🎯 対象となる方（顧客）</h3>
+          <p>健康診断の結果が気になる方、運動不足を感じている方、いまの健康を維持・改善したい方。</p>
+        </div>
+        <div class="concept-box">
+          <h3>🌱 目指すゴール（目的）</h3>
+          <p>病気を未然に予防し、誰もが毎日元気で健やかな生活を無理なく続けられるようにすること。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- コアサービス（アプリ×お店） -->
+    <h2 class="section-title">一番大事なサービス・コンテンツ</h2>
+    <section class="features">
+      
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>AI健康管理アプリ</h3>
+        <p>食事・運動・睡眠のデータを毎日簡単に記録。AIがあなたの生活リズムを分析し、パーソナライズされた健康アドバイスを届けて無理のない習慣化を導きます。</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🏥</div>
+        <h3>健康サポートショップ</h3>
+        <p>血圧測定や身体の状態チェックが気軽にできる実店舗。専門スタッフとの対面相談やアドバイスを受けられ、オンラインとオフラインがシームレスに繋がります。</p>
+      </div>
+
+    </section>
+
+    <!-- 提供に必要な要素 -->
+    <section class="resources">
+      <h2 class="section-title">サービス実現に必要な5つの要素</h2>
+      <ul class="resource-list">
+        <li class="resource-item"><span>✔</span> AI健康管理アプリ</li>
+        <li class="resource-item"><span>✔</span> 健康チェック設備</li>
+        <li class="resource-item"><span>✔</span> 店舗サポートスタッフ</li>
+        <li class="resource-item"><span>✔</span> 蓄積された健康データ</li>
+        <li class="resource-item"><span>✔</span> 続けやすいアドバイス</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; Health Support Service Concept - Design Thinking Worksheet
+  </footer>
+
+</body>
+</html>
